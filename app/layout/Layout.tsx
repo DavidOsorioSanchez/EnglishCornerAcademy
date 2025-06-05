@@ -4,6 +4,7 @@ import {
     Scripts,
     ScrollRestoration,
 } from "react-router";
+import NavbarCustom from "~/components/UI/Navbar.custom";
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -16,7 +17,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Meta />
                 <Links />
             </head>
-            <body>
+            <body className="bg-Background text-mywhite">
+                <NavbarCustom />
                 {children}
                 <ScrollRestoration />
                 <Scripts />
