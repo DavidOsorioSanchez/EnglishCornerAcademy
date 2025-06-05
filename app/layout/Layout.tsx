@@ -18,10 +18,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Links />
             </head>
             <body className="bg-Background text-mywhite">
-                <NavbarCustom />
-                {children}
-                <ScrollRestoration />
-                <Scripts />
+                    <NavbarCustom />
+                    {children}
+                    <ScrollRestoration />
+                    <Scripts />
             </body>
         </html>
     );

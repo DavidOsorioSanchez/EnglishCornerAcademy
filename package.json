@@ -9,6 +9,8 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@radix-ui/react-navigation-menu": "^1.2.13",
     "@react-router/node": "^7.5.3",
     "@react-router/serve": "^7.5.3",
@@ -17,10 +19,10 @@
     "input-otp": "^1.4.2",
     "isbot": "^5.1.27",
     "lucide-react": "^0.513.0",
-    "primereact": "^10.9.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.5.3",
+    "styled-components": "^6.1.18",
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
