@@ -18,8 +18,9 @@ export const List = [{
         "Son los trabajadores que maneja nuestra pagina.",
 },
 {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Servicios",
+    href: "/services",
+    description:
+        "Son los servicios que puedes usar en nuestra pagina.",
 },
 ];
