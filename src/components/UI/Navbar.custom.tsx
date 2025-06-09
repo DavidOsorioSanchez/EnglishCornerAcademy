@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from '~/components/UI/navigation-menu';
-import { List } from '~/utils/Arrays';
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from '@/components/UI/navigation-menu';
+import { List } from '@/utils/Arrays';
 
 export default function NavbarCustom() {
     return (
@@ -14,7 +14,7 @@ export default function NavbarCustom() {
                     <NavigationMenuList>
                         <NavigationMenuItem className='bg-mywhite text-Background rounded-sm'>
                             <NavigationMenuTrigger>Home</NavigationMenuTrigger>
-                            <NavigationMenuContent className='md:-translate-x-[20.8rem] lg:-translate-x-[27.11rem]'>
+                            <NavigationMenuContent className='bg-mywhite text-Background md:-translate-x-[20.8rem] lg:-translate-x-[27.11rem]'>
                                 <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                     <li className="row-span-3">
                                         <NavigationMenuLink asChild>
@@ -45,7 +45,7 @@ export default function NavbarCustom() {
                         </NavigationMenuItem>
                         <NavigationMenuItem className='bg-mywhite text-Background rounded-sm'>
                             <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-                            <NavigationMenuContent className='md:-translate-x-[18.18rem] lg:-translate-x-[24.50rem]'>
+                            <NavigationMenuContent className=' bg-mywhite text-Background md:-translate-x-[18.18rem] lg:-translate-x-[24.50rem]'>
                                 <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                     {List.map((item) => (
                                         <ListItem key={item.href} href={item.href} title={item.title}>

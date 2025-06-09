@@ -1,6 +1,7 @@
 
+import '../style/App.css'
 
-export function Main() {
+export default function App() {
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="container mx-auto text-center">
@@ -26,8 +27,9 @@ export function Main() {
         </div>
       </div>
     </main>
-  );
+  )
 }
+
 
 const resources = [
   {
@@ -70,3 +72,5 @@ const resources = [
     ),
   },
 ];
+
+

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@layer components {
+  .DocSearch-Hit--Result {
+    background-color: --alpha(var(--color-gray-950) / 10%);
+  }
+}
+
+@theme {
+  --color-Background: #333446;
+  --color-Items: #7F8CAA;
+  --color-details: #B8CFCE;
+  --color-mywhite: #EAEFEF;
+}
