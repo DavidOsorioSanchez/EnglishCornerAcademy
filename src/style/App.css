@@ -12,4 +12,18 @@
   --color-Items: #7F8CAA;
   --color-details: #B8CFCE;
   --color-mywhite: #EAEFEF;
+  --color-Darkblue: #131D4F;
+  --color-Blue: #00809D;
+  --color-Lightblue: #A4CCD9;
+
+  --animate-bajada: bajada 500ms ease-in-out;
+  @keyframes bajada {
+    0% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 }
+
