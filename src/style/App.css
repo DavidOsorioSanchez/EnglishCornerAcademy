@@ -17,13 +17,182 @@
   --color-Lightblue: #A4CCD9;
 
   --animate-bajada: bajada 500ms ease-in-out;
-  @keyframes bajada {
-    0% {
-      transform: translateY(-50px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
+
+  --animate-AparecerAbajo-1000: AparecerAbajo 1000ms ease-in-out;
+  --animate-AparecerAbajo-900: AparecerAbajo 900ms ease-in-out;
+  --animate-AparecerAbajo-800: AparecerAbajo 800ms ease-in-out;
+  --animate-AparecerAbajo-700: AparecerAbajo 700ms ease-in-out;
+  --animate-AparecerAbajo-600: AparecerAbajo 600ms ease-in-out;
+  --animate-AparecerAbajo-500: AparecerAbajo 500ms ease-in-out;
+  --animate-AparecerAbajo-400: AparecerAbajo 400ms ease-in-out;
+  --animate-AparecerAbajo-300: AparecerAbajo 300ms ease-in-out;
+  --animate-AparecerAbajo-200: AparecerAbajo 200ms ease-in-out;
+  --animate-AparecerAbajo-100: AparecerAbajo 100ms ease-in-out;
+
+  --animate-AparecerArriba-1000: AparecerArriba 1000ms ease-in-out;
+  --animate-AparecerArriba-900: AparecerArriba 900ms ease-in-out;
+  --animate-AparecerArriba-800: AparecerArriba 800ms ease-in-out;
+  --animate-AparecerArriba-700: AparecerArriba 700ms ease-in-out;
+  --animate-AparecerArriba-600: AparecerArriba 600ms ease-in-out;
+  --animate-AparecerArriba-500: AparecerArriba 500ms ease-in-out;
+  --animate-AparecerArriba-400: AparecerArriba 400ms ease-in-out;
+  --animate-AparecerArriba-300: AparecerArriba 300ms ease-in-out;
+  --animate-AparecerArriba-200: AparecerArriba 200ms ease-in-out;
+  --animate-AparecerArriba-100: AparecerArriba 100ms ease-in-out;
+
+
+  --animate-Badge-Portada: Badge-Portada 900ms ease-in-out;
+  --animate-Titulo-English: Titulo-English 1000ms ease-in-out;
+  --animate-Titulo-Corner: Titulo-Corner 1100ms ease-in-out;
+  --animate-Titulo-Academy: Titulo-Academy 1200ms ease-in-out;
+  --animate-Description-Portada: Description-Portada 1300ms ease-in-out;
+  --animate-Video-Portada: Description-Portada 1400ms ease-in-out;
+}
+
+@keyframes bajada {
+  0% {
+    transform: translateY(-50px);
   }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes AparecerAbajo {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes AparecerArriba {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateY(-50px);
+    filter: blur(8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+    filter: blur(0px);
+  }
+}
+
+/* animaciones de la portada */
+
+@keyframes Badge-Portada {
+  0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+        transform: translateY(-50px);
+        filter: blur(8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes Titulo-English {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(50px);
+        filter: blur(8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+@keyframes Titulo-Corner {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(50px);
+        filter: blur(8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes Titulo-Corner {
+    0% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 0;
+        transform: translateY(50px);
+        filter: blur(8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes Titulo-Academy {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+        transform: translateY(50px);
+        filter: blur(8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes Description-Portada {
+    0% {
+        opacity: 0;
+    }
+    95% {
+        opacity: 0;
+        transform: translateY(50px);
+        filter: blur(8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
 }
 

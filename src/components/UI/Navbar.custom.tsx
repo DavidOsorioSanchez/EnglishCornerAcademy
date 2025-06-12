@@ -6,7 +6,7 @@ import EnDesarrollo from '@/components/UI/EnDesarrollo';
 
 export default function NavbarCustom() {
     return (
-        <nav className="bg-Items/20 flex justify-between items-center gap-2 px-8 py-2 shadow-md animate-bajada">
+        <nav className="bg-Items/20 flex justify-between items-center gap-2 px-8 py-2 shadow-md">
             <a href='/' className="flex text-nowrap items-center space-x-2">
                 <img src="/IconPage.svg" alt="logo" className="w-12 h-12 aspect-square object-contain" />
                 <p className="font-bold text-xl underline underline-offset-1 underline-mywhite/50">English Corner Academy.</p>
@@ -15,7 +15,7 @@ export default function NavbarCustom() {
                 <NavigationMenu viewport={false} className='hidden min-[768px]:block'>
                     <NavigationMenuList>
                         <NavigationMenuItem className='bg-mywhite text-Background rounded-sm'>
-                            <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+                            <NavigationMenuTrigger>Cuenta</NavigationMenuTrigger>
                             <NavigationMenuContent className='bg-mywhite text-Background md:-translate-x-[20.8rem] lg:-translate-x-[27.11rem]'>
                                 <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                     <li className="row-span-3">
@@ -56,7 +56,7 @@ export default function NavbarCustom() {
                             </NavigationMenuContent>
                         </NavigationMenuItem>
                         <NavigationMenuItem className='bg-mywhite text-Background rounded-sm'>
-                            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+                            <NavigationMenuTrigger>Paginas</NavigationMenuTrigger>
                             <NavigationMenuContent className=' bg-mywhite text-Background md:-translate-x-[18.18rem] lg:-translate-x-[24.50rem]'>
                                 <ul className=" grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                     {List.map((item) => (
