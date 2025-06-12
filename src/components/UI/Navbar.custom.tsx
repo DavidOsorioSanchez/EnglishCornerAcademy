@@ -7,10 +7,10 @@ import EnDesarrollo from '@/components/UI/EnDesarrollo';
 export default function NavbarCustom() {
     return (
         <nav className="bg-Items/20 flex justify-between items-center gap-2 px-8 py-2 shadow-md animate-bajada">
-            <div className="flex text-nowrap items-center space-x-2">
+            <a href='/' className="flex text-nowrap items-center space-x-2">
                 <img src="/IconPage.svg" alt="logo" className="w-12 h-12 aspect-square object-contain" />
                 <p className="font-bold text-xl underline underline-offset-1 underline-mywhite/50">English Corner Academy.</p>
-            </div>
+            </a>
             <div className="flex flex-nowrap gap-10 text-lg">
                 <NavigationMenu viewport={false} className='hidden min-[768px]:block'>
                     <NavigationMenuList>
