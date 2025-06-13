@@ -6,32 +6,45 @@ import {
     CarouselPrevious,
 } from "@/components/UI/carousel"
 import { reviews } from "@/utils/Arrays";
+import TwitterCard from "@/components/UI/TwitterCard";
 
 export default function CarouselTwitter() {
     return (
-        <div className="h-auto my-2">
-                        <Carousel className="w-full flex items-center " opts={{
-                            align: "start",
-                        }}>
-                            <CarouselContent className="">
-                                {reviews.map((index) => (
-                                    <CarouselItem key={index.id}>
-                                        <article className="w-full h-96 flex flex-col items-center justify-center p-6 border-2">
-                                            <img className="rounded-full" width="32" height="32" alt="" src={index.img} />
-                                            <div className="flex flex-col">
-                                                <figcaption className="text-sm font-medium dark:text-white">
-                                                    {index.name}
-                                                </figcaption>
-                                                <p className="text-xs font-medium dark:text-white/40">{index.username}</p>
-                                            </div>
-        
-                                        </article>
-                                    </CarouselItem>
-                                ))}
-                            </CarouselContent>
-                            <CarouselPrevious />
-                            <CarouselNext />
-                        </Carousel>
-                    </div>
+        <section className="w-full flex flex-col items-center gap-10 ">
+            <div>
+                <p className="text-center text-md font-semibold text-cyan-500">Opiniones</p>
+                <h2 className="text-4xl font-bold">
+                    Opiniones de nuestros usuarios. 🎖️
+                </h2>
+                <p className="text-mywhite/60">Comparte tus opiniones y comentarios con nosotros.</p>
+            </div>
+            <div className="h-auto my-2">
+                <Carousel className="w-full max-w-3xl " opts={{
+                    align: "center",
+                    active: true,
+                }}>
+                    <CarouselContent className="">
+                        {reviews.map((index) => (
+                            <CarouselItem key={index.id}>
+                                <TwitterCard 
+                                    name={index.name}
+                                    username={index.username}
+                                    img={index.img}
+                                    date={index.date}
+                                    body={index.body}
+                                    likes={index.likes}
+                                    retweets={index.retweets}
+                                    replies={index.replies}
+                                    
+                                />
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
+            </div>
+        </section>
+
     )
 }
