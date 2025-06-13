@@ -9,10 +9,10 @@ export default function NavbarCustom() {
         <nav className="bg-Items/20 flex justify-between items-center gap-2 px-8 py-2 shadow-md">
             <a href='/' className="flex text-nowrap items-center space-x-2">
                 <img src="/IconPage.svg" alt="logo" className="w-12 h-12 aspect-square object-contain" />
-                <p className="font-bold text-xl underline underline-offset-1 underline-mywhite/50">English Corner Academy.</p>
+                <p className="hidden font-bold text-xl underline underline-offset-1 underline-mywhite/50 sm:block">English Corner Academy.</p>
             </a>
             <div className="flex flex-nowrap gap-10 text-lg">
-                <NavigationMenu viewport={false} className='hidden min-[768px]:block'>
+                <NavigationMenu viewport={false} className='hidden md:block'>
                     <NavigationMenuList>
                         <NavigationMenuItem className='bg-mywhite text-Background rounded-sm'>
                             <NavigationMenuTrigger>Cuenta</NavigationMenuTrigger>

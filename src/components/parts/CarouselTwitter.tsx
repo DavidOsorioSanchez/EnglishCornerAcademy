@@ -13,10 +13,10 @@ export default function CarouselTwitter() {
         <section className="w-full flex flex-col items-center gap-10 ">
             <div>
                 <p className="text-center text-md font-semibold text-cyan-500">Opiniones</p>
-                <h2 className="text-4xl font-bold">
+                <h2 className="text-center text-2xl font-bold sm:text-4xl">
                     Opiniones de nuestros usuarios. 🎖️
                 </h2>
-                <p className="text-mywhite/60">Comparte tus opiniones y comentarios con nosotros.</p>
+                <p className="text-center text-xs text-mywhite/60 sm:text-base">Comparte tus opiniones y comentarios con nosotros.</p>
             </div>
             <div className="h-auto my-2">
                 <Carousel className="w-full max-w-3xl " opts={{

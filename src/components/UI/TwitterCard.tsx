@@ -13,7 +13,7 @@ interface TwitterCardProps {
 
 export default function TwitterCard( { name, username, img, date, body, likes, retweets, replies }: TwitterCardProps) {
     return (
-        <article className="w-full flex justify-center items-center">
+        <article className="w-full flex justify-center items-center scale-[0.6] sm:scale-100">
             <div className="w-full max-w-[35rem] min-h-36 flex bg-black border-2 py-3 px-6 gap-4 border-white rounded-none">
                 <img className="rounded-full size-16 aspect-square object-cover" alt="Foto perfil" src={img} />
                 <div className="w-full flex flex-col gap-1">

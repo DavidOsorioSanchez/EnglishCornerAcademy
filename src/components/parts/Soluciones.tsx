@@ -4,7 +4,7 @@ export default function Soluciones(){
         <section className="w-full flex flex-col items-center gap-10 ">
             <div>
                 <p className="text-center text-md font-semibold text-cyan-500">Soluciones</p>
-                <h2 className="text-4xl font-bold">Lo que te prometemos solucionar. ✨</h2>
+                <h2 className="text-center text-2xl font-bold sm:text-4xl">Lo que te prometemos solucionar. ✨</h2>
             </div>
             <div className="flex flex-col flex-nowrap shrink justify-around items-center gap-10 w-full min-[818px]:flex-row">
                 <div id="Target-Micro" className="max-w-96 p-6 flex flex-col gap-2 rounded-md bg-mywhite/5">
