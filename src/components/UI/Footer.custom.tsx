@@ -2,7 +2,7 @@ import BookEffect from "@/assets/BookEfect"
 
 export default function FooterCustom() {
     return (
-        <footer className="relative min-h-24 h-auto items-end mt-6 bg-linear-to-r from-cyan-500 to-blue-500 text-mywhite">
+        <footer className="relative min-h-24 bottom-0 h-auto items-end mt-6 bg-linear-to-r from-cyan-500 to-blue-500 text-mywhite">
             <BookEffect />
             <div className="absolute pt-8 w-full h-full flex justify-around items-center">
                 <p>©2025 English Corner Academy</p>

@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* @custom-variant dark (&:is(.dark *)); */
+
 @layer components {
   .DocSearch-Hit--Result {
     background-color: --alpha(var(--color-gray-950) / 10%);
@@ -40,13 +42,12 @@
   --animate-AparecerArriba-200: AparecerArriba 200ms ease-in-out;
   --animate-AparecerArriba-100: AparecerArriba 100ms ease-in-out;
 
-
   --animate-Badge-Portada: Badge-Portada 900ms ease-in-out;
   --animate-Titulo-English: Titulo-English 1000ms ease-in-out;
   --animate-Titulo-Corner: Titulo-Corner 1100ms ease-in-out;
   --animate-Titulo-Academy: Titulo-Academy 1200ms ease-in-out;
   --animate-Description-Portada: Description-Portada 1300ms ease-in-out;
-  --animate-Video-Portada: Description-Portada 1400ms ease-in-out;
+  --animate-Buttons-Portada: Description-Portada 1400ms ease-in-out;
 }
 
 @keyframes bajada {
@@ -195,4 +196,3 @@
         opacity: 1;
     }
 }
-
