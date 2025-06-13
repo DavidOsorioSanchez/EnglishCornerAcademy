@@ -3,9 +3,9 @@ import Soluciones from "@/components/parts/Soluciones";
 
 export default function Home() {
     return (
-        <main className="min-h-screen h-auto flex flex-col items-center justify-start ">
+        <main className="min-h-screen h-auto flex flex-col items-center justify-start gap-12">
             <div className="flex w-full min-h-[36rem] h-auto flex-wrap items-center justify-center gap-8">
-                <div className="flex flex-col items-center justify-center min-[550px]:items-start">
+                <div className="flex flex-col items-center py-4 justify-center min-[768px]:items-start min-[768px]:py-0">
                     <Badge
                         variant="secondary"
                         className="bg-blue-500 rounded-full py-0.5 px-1.5 text-sm font-medium animate-Badge-Portada"

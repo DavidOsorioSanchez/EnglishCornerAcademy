@@ -42,12 +42,13 @@
   --animate-AparecerArriba-200: AparecerArriba 200ms ease-in-out;
   --animate-AparecerArriba-100: AparecerArriba 100ms ease-in-out;
 
-  --animate-Badge-Portada: Badge-Portada 900ms ease-in-out;
-  --animate-Titulo-English: Titulo-English 1000ms ease-in-out;
-  --animate-Titulo-Corner: Titulo-Corner 1100ms ease-in-out;
-  --animate-Titulo-Academy: Titulo-Academy 1200ms ease-in-out;
-  --animate-Description-Portada: Description-Portada 1300ms ease-in-out;
-  --animate-Buttons-Portada: Description-Portada 1400ms ease-in-out;
+  --animate-Badge-Portada: Portada 900ms ease-in-out;
+  --animate-Titulo-English: Portada 1000ms ease-in-out;
+  --animate-Titulo-Corner: Portada 1100ms ease-in-out;
+  --animate-Titulo-Academy: Portada 1200ms ease-in-out;
+  --animate-Description-Portada: Portada 1300ms ease-in-out;
+  --animate-Buttons-Portada: Portada 1400ms ease-in-out;
+  
 }
 
 @keyframes bajada {
@@ -96,11 +97,11 @@
 
 /* animaciones de la portada */
 
-@keyframes Badge-Portada {
+@keyframes Portada {
   0% {
         opacity: 0;
     }
-    75% {
+    80% {
         opacity: 0;
         transform: translateY(-50px);
         filter: blur(8px);
@@ -113,86 +114,13 @@
     }
 }
 
-@keyframes Titulo-English {
-    0% {
-        opacity: 0;
-    }
-    80% {
-        opacity: 0;
-        transform: translateY(50px);
-        filter: blur(8px);
-    }
-
-    100% {
-        transform: translateY(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
-}
-@keyframes Titulo-Corner {
-    0% {
-        opacity: 0;
-    }
-    80% {
-        opacity: 0;
-        transform: translateY(50px);
-        filter: blur(8px);
-    }
-
-    100% {
-        transform: translateY(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes Titulo-Corner {
-    0% {
-        opacity: 0;
-    }
-    85% {
-        opacity: 0;
-        transform: translateY(50px);
-        filter: blur(8px);
-    }
-
-    100% {
-        transform: translateY(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes Titulo-Academy {
-    0% {
-        opacity: 0;
-    }
-    90% {
-        opacity: 0;
-        transform: translateY(50px);
-        filter: blur(8px);
-    }
-
-    100% {
-        transform: translateY(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes Description-Portada {
-    0% {
-        opacity: 0;
-    }
-    95% {
-        opacity: 0;
-        transform: translateY(50px);
-        filter: blur(8px);
-    }
-
-    100% {
-        transform: translateY(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
+@keyframes aparecer {
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
 }
