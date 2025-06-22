@@ -1,11 +1,13 @@
 import "../../style/index.css"
+import Tittle from "@/components/standalone/Tittle";
 export default function Soluciones(){
     return(
         <section className="w-full flex flex-col items-center gap-10 ">
-            <div>
-                <p className="text-center text-md font-semibold text-cyan-500">Soluciones</p>
-                <h2 className="text-center text-2xl font-bold sm:text-4xl">Lo que te prometemos solucionar. ✨</h2>
-            </div>
+            <Tittle
+                SubTittleText="Soluciones"
+                TittleText="Lo que te prometemos solucionar. ✨"      
+                Descripcion={false}      
+            />
             <div className="flex flex-col flex-nowrap shrink justify-around items-center gap-10 w-full min-[818px]:flex-row">
                 <div id="Target-Micro" className="max-w-96 p-6 flex flex-col gap-2 rounded-md bg-mywhite/5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-12 bg-blue-500/90 rounded-full p-2">

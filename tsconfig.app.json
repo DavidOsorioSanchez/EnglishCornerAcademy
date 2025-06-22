@@ -28,7 +28,25 @@
     "paths": {
       "@/*": [
         "./src/*"
-      ]
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@UI/*": [
+        "./src/components/UI/*"
+      ],
+      "@parts/*": [
+        "./src/components/parts/*"
+      ],
+      "@standalone/*": [
+        "./src/components/standalone/*"
+      ],
+      "@logic/*": [
+        "./src/components/logic/*"
+      ],
     }
   },
   "include": [

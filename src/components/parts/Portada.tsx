@@ -1,8 +1,9 @@
 import { Badge } from "@/components/UI/badge";
+// import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 export default function Portada() {
     return (
-        <section className="flex w-full min-h-[35rem] h-auto flex-wrap items-center justify-center gap-8">
+        <section className="flex w-full min-h-[30rem] h-auto flex-wrap items-center justify-center mt-10 gap-8">
             <div className="flex flex-col items-center py-4 justify-center min-[768px]:items-start min-[768px]:py-0">
                 <Badge
                     variant="secondary"
@@ -39,9 +40,18 @@ export default function Portada() {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
             // className="animate-Video-Portada"
-            >
+            > 
 
             </iframe>
+            {/* <div className="animate-Video-Portada">
+                <LiteYouTubeEmbed
+                    id="KVakLLMBQxg"
+                    title="YouTube video player"
+                    poster="maxresdefault"
+                    webp={true}
+                    noCookie={true}
+                />
+            </div> */}
         </section>
     )
 }

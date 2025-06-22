@@ -7,17 +7,17 @@ import {
 } from "@/components/UI/carousel"
 import { reviews } from "@/utils/Arrays";
 import TwitterCard from "@/components/UI/TwitterCard";
+import Tittle from "@/components/standalone/Tittle";
 
 export default function CarouselTwitter() {
     return (
         <section className="w-full flex flex-col items-center gap-10 ">
-            <div>
-                <p className="text-center text-md font-semibold text-cyan-500">Opiniones</p>
-                <h2 className="text-center text-2xl font-bold sm:text-4xl">
-                    Opiniones de nuestros usuarios. 🎖️
-                </h2>
-                <p className="text-center text-xs text-mywhite/60 sm:text-base">Comparte tus opiniones y comentarios con nosotros.</p>
-            </div>
+            <Tittle
+                SubTittleText="Opiniones"
+                TittleText="Opiniones de nuestros usuarios. 🎖️"
+                Descripcion={true}
+                DescripcionText="Comparte tus opiniones y comentarios con nosotros."
+            />
             <div className="h-auto my-2">
                 <Carousel className="w-full max-w-3xl " opts={{
                     align: "center",
