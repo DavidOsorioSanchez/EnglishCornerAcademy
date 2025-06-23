@@ -19,6 +19,8 @@
   --color-Lightblue: #A4CCD9;
 
   --animate-bajada: bajada 500ms ease-in-out;
+  --animate-ToolBarAparecer: ToolBarAparecer 50ms ease-in-out;
+  --animate-ToolBarMenu: ToolBarMenu 200ms ease-in-out;
 
   --animate-AparecerAbajo-1000: AparecerAbajo 1000ms ease-in-out;
   --animate-AparecerAbajo-900: AparecerAbajo 900ms ease-in-out;
@@ -122,5 +124,29 @@
   to{
     opacity: 1;
     scale: 1;
+  }
+}
+
+@keyframes ToolBarAparecer {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes ToolBarMenu {
+  0%{
+    opacity: 0;
+  }
+  
+  50%{
+    transform: translateY(350px);
+    opacity: 0.5;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
   }
 }

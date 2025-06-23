@@ -39,7 +39,7 @@ export default function Tittle(
         // titulo props
         TittleText,
         TittleTextColor = "text-white",
-        TittleTextSize = "text-2xl",
+        TittleTextSize = "text-3xl",
         TittleResponsiveTextSize = "md:text-4xl",
         TittleTextAlign = "text-center",
         TittleFontWeight = "font-bold",
