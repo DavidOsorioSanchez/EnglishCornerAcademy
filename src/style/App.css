@@ -3,10 +3,22 @@
 
 /* @custom-variant dark (&:is(.dark *)); */
 
+:root {
+  background-color: #333446;
+}
+
 @layer components {
   .DocSearch-Hit--Result {
     background-color: --alpha(var(--color-gray-950) / 10%);
   }
+}
+
+@view-transition{
+  navigation: auto;
+}
+
+::view-transition-group(*){
+  animation-duration: 100ms;
 }
 
 @theme {
@@ -17,6 +29,9 @@
   --color-Darkblue: #131D4F;
   --color-Blue: #00809D;
   --color-Lightblue: #A4CCD9;
+
+  /* shadow */
+  --shadow-TarjetaWorkers: 0 60px 60px -60px rgba(0, 0, 0, #33344650);
 
   --animate-bajada: bajada 500ms ease-in-out;
   --animate-ToolBarAparecer: ToolBarAparecer 50ms ease-in-out;

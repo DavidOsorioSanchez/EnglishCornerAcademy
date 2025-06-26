@@ -51,6 +51,61 @@
     animation-fill-mode: both;
 }
 
+#workersMainContainers{
+    position: relative;
+    width: 250px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+#workersMainContainers:hover{
+    transform:
+        perspective(1000px)
+        rotateX(10deg)
+        translateY(-5%)
+        translateZ(0)
+    ;
+}
+
+#workersMainImage{
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 3/4;
+    transition: all 0.3s ease-in-out;
+}
+
+#workersMainContainers:hover #workersMainImage{
+    filter: brightness(0.5) blur(2px);
+
+}
+
+
+#workersInformation{
+    position: absolute;
+    background-color: #ffff;
+    width: 230px;
+    height: min(230px, auto);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+
+    border-radius: 4px;
+    padding: 4px;
+}
+
+#workersMainContainers:hover #workersInformation{
+    bottom: 100px;
+    opacity: 1;
+}
+
+
+
 @keyframes aparecer {
     from {
         opacity: 0;
