@@ -1,5 +1,5 @@
 
-export const List = [{
+export const List : Array<any> = [{
     title: "Contenido",
     href: "/content",
     description:
@@ -25,7 +25,7 @@ export const List = [{
 },
 ];
 
-export const reviews = [
+export const reviews : Array<any> = [
     {
         id: 0,
         name: "Jack",
@@ -94,15 +94,24 @@ export const reviews = [
     },
 ];
 
-export const workers = [
+export const workers : Array<any> = [
     {
-        id: 0,
+        id: 1,
         name: "Alejandro Osorio",
         img: "https://scontent.feoh4-3.fna.fbcdn.net/v/t39.30808-6/469794242_10228033056433372_3774422237624396587_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHE1JM7WOTgLfbyOthu5_2Cj9cuVYnalZeP1y5VidqVl9AF2lRQlkvhxleP5SWyBDyDA2lmuJoalzNZZk5fNc07&_nc_ohc=ca29a6tUzVUQ7kNvwGmXCDr&_nc_oc=AdnZyzsgWgJ6qX-2dr4SL7uEqEwYyYN36ZQj2KTyaSBGarmBUGgwGOX1gXYT9JSu1Hk&_nc_zt=23&_nc_ht=scontent.feoh4-3.fna&_nc_gid=RXoT-xD_JdtTHeCkHBBzag&oh=00_AfMPa3qpVDkkeBt2pLj8aOTE5Jr4D9SJqJ6wWSM8VR35Cw&oe=68629AC0",
+        vanderImg: "https://avatar.vercel.sh/jill",
         position: ["Profesor de Inglés", "Fundador"],
-        PaginaDescripcion: "/workers/alejandro-osorio",
+        age: 60,
+        experience: 16,
+        PaginaDescripcion: `/workers/1`,
         Horarios: "9:00 Am - 5:00 Pm",
         Dias:["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"],
+        description: "Alejandro Osorio es un profesor de inglés con más de 16 años de experiencia en la enseñanza del idioma. Fundador de English Corner Academy, ha dedicado su carrera a ayudar a estudiantes de todas las edades a alcanzar sus metas lingüísticas. Su enfoque personalizado y su pasión por la enseñanza lo convierten en un educador excepcional.",
+        Email: "alejandro.osorio@example.com",
+        Telefono: "+57 300 1234567",
+        RedesSociales: {
+            Linkedin: "https://www.linkedin.com/in/alejandro-osorio-velasquez-221ba895/"
+        },
     },
     
     // {

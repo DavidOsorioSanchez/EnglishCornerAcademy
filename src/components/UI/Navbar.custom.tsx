@@ -22,8 +22,8 @@ export default function NavbarCustom() {
                     <NavigationMenuList>
                         <NavigationMenuItem className='bg-mywhite text-Background rounded-sm'>
                             <NavigationMenuTrigger>Cuenta</NavigationMenuTrigger>
-                            <NavigationMenuContent className='bg-mywhite text-Background md:-translate-x-[20.8rem] lg:-translate-x-[27.11rem]'>
-                                <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                            <NavigationMenuContent className='bg-mywhite text-Background md:-translate-x-[20.8rem] lg:-translate-x-[27.11rem] z-50'>
+                                <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] z-50">
                                     <li className="row-span-3">
                                         <NavigationMenuLink asChild className="bg-Lightblue/50 transition-all hover:bg-Lightblue/25">
                                             <a
@@ -63,7 +63,7 @@ export default function NavbarCustom() {
                         </NavigationMenuItem>
                         <NavigationMenuItem className='bg-mywhite text-Background rounded-sm'>
                             <NavigationMenuTrigger>Paginas</NavigationMenuTrigger>
-                            <NavigationMenuContent className=' bg-mywhite text-Background md:-translate-x-[18.18rem] lg:-translate-x-[24.50rem]'>
+                            <NavigationMenuContent className=' bg-mywhite text-Background md:-translate-x-[18.18rem] lg:-translate-x-[24.50rem] z-50'>
                                 <ul className=" grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                     {List.map((item) => (
                                         <ListItem key={item.href} href={item.href} title={item.title} className='bg-Lightblue/20 hover:brightness-110'>
