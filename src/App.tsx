@@ -7,6 +7,7 @@ import Workers from "@/pages/Workers";
 import Service from "@/pages/Service";
 import Login from "@/pages/auth/Login";
 import Singup from "@/pages/auth/Singup";
+import AlejandroOsorio from "@/pages/workers/AlejandroOsorio";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <Route path="/services" element={<Service />} />
       <Route path="auth/login" element={<Login />} />
       <Route path="auth/singup" element={<Singup />} />
+      <Route path="workers/alejandro-osorio" element={<AlejandroOsorio />} />
     </Routes>
   )
 }
