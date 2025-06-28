@@ -5,6 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/UI/avatar"
 import EnDesarrollo from '@/components/UI/EnDesarrollo';
 import ResponsiveToolBar from '@/components/UI/ResponsiveToolbar';
 import { Link } from 'react-router-dom';
+import { Home, Login } from '@/utils/magicValues';
 
 export default function NavbarCustom() {
     const [open, setOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function NavbarCustom() {
     }
     return (
         <nav className="bg-Items/20 flex justify-between items-center gap-2 px-8 py-2 shadow-md">
-            <Link to='/' className="flex text-nowrap items-center space-x-2">
+            <Link to={Home} className="flex text-nowrap items-center space-x-2">
                 <img src="/IconPage.svg" alt="logo" className="w-12 h-12 aspect-square object-contain" />
                 <p className="hidden font-bold text-xl underline underline-offset-1 underline-mywhite/50 sm:block">English Corner Academy.</p>
             </Link>
@@ -29,7 +30,7 @@ export default function NavbarCustom() {
                                         <NavigationMenuLink asChild className="bg-Lightblue/50 transition-all hover:bg-Lightblue/25">
                                             <a
                                                 className="from-muted/50 to-muted flex h-full w-full flex-col gap-4 justify-center items-center rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                                                href="/Login"
+                                                href={Login}
                                             >
                                                 <Avatar>
                                                     <AvatarImage src="https://avatars.githubusercontent.com/u/124599?v=4" />

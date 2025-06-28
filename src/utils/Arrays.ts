@@ -1,25 +1,26 @@
+import { Content, Prices, Workers, Service } from "./magicValues";
 
 export const List : Array<any> = [{
     title: "Contenido",
-    href: "/content",
+    href: Content,
     description:
         "Es el contenido principal de nuestra pagina.",
 },
 {
     title: "Planes",
-    href: "/prices",
+    href: Prices,
     description:
         "Son los precios que maneja nuestra pagina.",
 },
 {
     title: "Elenco de Trabajadores",
-    href: "/workers",
+    href: Workers,
     description:
         "Son los trabajadores que maneja nuestra pagina.",
 },
 {
     title: "Servicios",
-    href: "/services",
+    href: Service,
     description:
         "Son los servicios que puedes usar en nuestra pagina.",
 },
