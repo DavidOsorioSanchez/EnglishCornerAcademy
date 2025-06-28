@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../../style/index.css';
 // name: "Jill",
 // img: "https://avatar.vercel.sh/jill",
@@ -21,7 +22,7 @@ export default function WorkerCard({ name, img, position, PaginaDescripcion, Hor
     return (
         <article id='workersMainContainers'>
             <img src={img} alt={name} id='workersMainImage' />
-            <a href={PaginaDescripcion} id="workersInformation" className="flex flex-col justify-center items-start gap-2 ">
+            <Link to={PaginaDescripcion} id="workersInformation" className="flex flex-col justify-center items-start gap-2 ">
                 <div className="flex flex-col">
                     <p className="text-black text-xl font-semibold text-start text-nowwrap border-b-[1px] border-black/50">{name}</p>
                     <p className="text-black/75 font-light text-sm text-start text-nowwrap">{position.join(" - ")}</p>
@@ -39,7 +40,7 @@ export default function WorkerCard({ name, img, position, PaginaDescripcion, Hor
                     <p className="text-black text-sm text-nowwrap ">{Dias.join(" - ")}</p>   
                 </div>
                 
-            </a>
+            </Link>
         </article>
     )
 }

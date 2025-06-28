@@ -11,6 +11,7 @@ import Service from "@/pages/Service";
 import Login from "@/pages/auth/Login";
 import Singup from "@/pages/auth/Singup";
 import Trabajadores from "@/pages/Trabajadores";
+import NotFound from "@/pages/error/404NotFound";
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
       <Route path="auth/login" element={<Layout><Login /></Layout>} />
       <Route path="auth/singup" element={<Layout><Singup /></Layout>} />
       <Route path="workers/:id" element={<Perfiles><Trabajadores /></Perfiles>} />
+      <Route element={<NotFound />} path="*"/>
     </Routes>
   )
 }

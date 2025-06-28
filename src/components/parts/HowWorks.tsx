@@ -1,8 +1,8 @@
 import Tittle from "@/components/standalone/Tittle";
 import ButtonHowUse from "@/components/UI/ButtonHowUse";
-import HowToUseExample1 from "../../assets/images/HowToUseExample1.webp";
-import HowToUseExample2 from "../../assets/images/HowToUseExample2.webp";
-import HowToUseExample3 from "../../assets/images/HowToUseExample3.webp";
+import HowToUseExample1 from "@/assets/images/HowToUseExample1.webp";
+import HowToUseExample2 from "@/assets/images/HowToUseExample2.webp";
+import HowToUseExample3 from "@/assets/images/HowToUseExample3.webp";
 import { useState } from "react";
 
 export default function HowWorks() {

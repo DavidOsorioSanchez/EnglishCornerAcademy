@@ -4,6 +4,7 @@ import { List } from '@/utils/Arrays';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/UI/avatar"
 import EnDesarrollo from '@/components/UI/EnDesarrollo';
 import ResponsiveToolBar from '@/components/UI/ResponsiveToolbar';
+import { Link } from 'react-router-dom';
 
 export default function NavbarCustom() {
     const [open, setOpen] = useState(false);
@@ -13,10 +14,10 @@ export default function NavbarCustom() {
     }
     return (
         <nav className="bg-Items/20 flex justify-between items-center gap-2 px-8 py-2 shadow-md">
-            <a href='/' className="flex text-nowrap items-center space-x-2">
+            <Link to='/' className="flex text-nowrap items-center space-x-2">
                 <img src="/IconPage.svg" alt="logo" className="w-12 h-12 aspect-square object-contain" />
                 <p className="hidden font-bold text-xl underline underline-offset-1 underline-mywhite/50 sm:block">English Corner Academy.</p>
-            </a>
+            </Link>
             <div className="flex flex-nowrap gap-10 text-lg">
                 <NavigationMenu viewport={false} className='hidden md:block'>
                     <NavigationMenuList>
@@ -99,12 +100,12 @@ function ListItem({
     return (
         <li {...props}>
             <NavigationMenuLink asChild>
-                <a href={href}>
+                <Link to={href}>
                     <div className="text-sm leading-none font-medium">{title}</div>
                     <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
                         {children}
                     </p>
-                </a>
+                </Link>
             </NavigationMenuLink>
         </li>
     )
