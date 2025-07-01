@@ -3,6 +3,7 @@ import Soluciones from "@/components/parts/Soluciones";
 import CarouselTwitter from "@/components/parts/CarouselTwitter";
 import HowWorks from "@/components/parts/HowWorks";
 import OurWorkers from "@/components/parts/OurWorkers";
+import Precios from "@/components/parts/Precios";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <CarouselTwitter />
             <HowWorks />
             <OurWorkers />
+            <Precios />
         </main>
     )
 }

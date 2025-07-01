@@ -4,6 +4,7 @@ import HowToUseExample1 from "@/assets/images/HowToUseExample1.webp";
 import HowToUseExample2 from "@/assets/images/HowToUseExample2.webp";
 import HowToUseExample3 from "@/assets/images/HowToUseExample3.webp";
 import { useState } from "react";
+import { HowWorksUrl } from "@/utils/magicValues";
 
 export default function HowWorks() {
     const [fotoMostrar, setFotoMostrar] = useState<string>(HowToUseExample1);
@@ -28,7 +29,7 @@ export default function HowWorks() {
     };
 
     return (
-        <section className="w-full flex flex-col justify-center items-center gap-10">
+        <section id={HowWorksUrl} className="w-full flex flex-col justify-center items-center gap-10 ">
             <Tittle
                 SubTittleText="Como Funciona?"
                 TittleText="Solo 3 pasos para empezar. ⚡"

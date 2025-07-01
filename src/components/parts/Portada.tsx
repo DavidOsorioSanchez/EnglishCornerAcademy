@@ -1,9 +1,10 @@
 import { Badge } from "@/components/UI/badge";
+import { PortadaUrl } from "@/utils/magicValues";
 // import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 export default function Portada() {
     return (
-        <section className="flex w-full min-h-[30rem] h-auto flex-wrap items-center justify-center mt-10 gap-8">
+        <section id={PortadaUrl} className="flex w-full min-h-[30rem] h-auto flex-wrap items-center justify-center mt-10 gap-8 ">
             <div className="flex flex-col items-center py-4 justify-center min-[768px]:items-start min-[768px]:py-0">
                 <Badge
                     variant="secondary"

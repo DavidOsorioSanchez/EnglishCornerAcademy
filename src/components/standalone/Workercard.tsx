@@ -17,8 +17,6 @@ interface WorkerCardProps {
 }
 
 export default function WorkerCard({ name, img, position, PaginaDescripcion, Horarios, Dias }: WorkerCardProps) {
-    console.log("WorkerCard rendered with:", { name, img, position, PaginaDescripcion, Horarios, Dias });
-
     return (
         <article id='workersMainContainers'>
             <img src={img} alt={name} id='workersMainImage' />

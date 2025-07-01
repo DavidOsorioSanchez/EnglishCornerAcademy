@@ -1,29 +1,42 @@
-import { Content, Prices, Workers, Service } from "./magicValues";
+import { PricesUrl, WorkersUrl, SolucionesUrl, PortadaUrl, OpinionesUrl, HowWorksUrl } from "./magicValues";
 
 export const List : Array<any> = [{
-    title: "Contenido",
-    href: Content,
+    title: "Portada",
+    href: PortadaUrl,
     description:
-        "Es el contenido principal de nuestra pagina.",
+        "Son los servicios que puedes usar en nuestra pagina.",
 },
 {
-    title: "Planes",
-    href: Prices,
+    title: "Soluciones",
+    href: SolucionesUrl,
     description:
-        "Son los precios que maneja nuestra pagina.",
+        "Son las soluciones que ofrece nuestra pagina.",
+},
+{
+    title: "Opiniones",
+    href: OpinionesUrl,
+    description:
+        "Son las opiniones de los usuarios.",
+},
+{
+    title: "Como Empezar?",
+    href: HowWorksUrl,
+    description:
+        "Como se maneja nuestra pagina.",
 },
 {
     title: "Elenco de Trabajadores",
-    href: Workers,
+    href: WorkersUrl,
     description:
         "Son los trabajadores que maneja nuestra pagina.",
 },
 {
-    title: "Servicios",
-    href: Service,
+    title: "Planes",
+    href: PricesUrl,
     description:
-        "Son los servicios que puedes usar en nuestra pagina.",
+        "Son los precios que maneja nuestra pagina.",
 },
+
 ];
 
 export const reviews : Array<any> = [
@@ -107,7 +120,16 @@ export const workers : Array<any> = [
         PaginaDescripcion: `/workers/1`,
         Horarios: "9:00 Am - 5:00 Pm",
         Dias:["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"],
-        description: "Alejandro Osorio es un profesor de inglés con más de 16 años de experiencia en la enseñanza del idioma. Fundador de English Corner Academy, ha dedicado su carrera a ayudar a estudiantes de todas las edades a alcanzar sus metas lingüísticas. Su enfoque personalizado y su pasión por la enseñanza lo convierten en un educador excepcional.",
+        description: `
+            <b>Alejandro Osorio</b> no es solo otro profesor de inglés. Con <b>más de 20 años de experiencia, ha transformado la vida de cientos de estudiantes</b>, ayudándoles a <b>hablar con confianza, aprobar exámenes clave (como TOEFL o IELTS) y avanzar en sus carreras</b>.  
+
+            Como <b>fundador de English Corner Academy</b>, su método personalizado combina:  
+            ✔ <b>Clases adaptadas</b> a tus metas y ritmo de aprendizaje.  
+            ✔ <b>Técnicas probadas</b> para que hables desde la primera clase.  
+            ✔ <b>Enfoque práctico</b>, con énfasis en conversación y fluidez.  
+
+            ¿Listo para dejar atrás el inglés básico? <b>¡Agenda tu clase hoy y da el salto que tu futuro necesita!</b>
+        `,
         Email: "alejandro.osorio@example.com",
         Telefono: "+57 300 1234567",
         RedesSociales: {

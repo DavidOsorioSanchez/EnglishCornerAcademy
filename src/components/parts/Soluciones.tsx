@@ -1,8 +1,11 @@
+import { SolucionesUrl } from "@/utils/magicValues";
 import "../../style/index.css"
 import Tittle from "@/components/standalone/Tittle";
+
+
 export default function Soluciones(){
     return(
-        <section className="w-full flex flex-col items-center gap-10 ">
+        <section id={SolucionesUrl} className="w-full flex flex-col items-center gap-10 ">
             <Tittle
                 SubTittleText="Soluciones"
                 TittleText="Lo que te prometemos solucionar. ✨"      

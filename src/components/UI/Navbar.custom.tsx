@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from '@/components/UI/navigation-menu';
 import { List } from '@/utils/Arrays';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/UI/avatar"
@@ -6,7 +6,7 @@ import EnDesarrollo from '@/components/UI/EnDesarrollo';
 import ResponsiveToolBar from '@/components/UI/ResponsiveToolbar';
 import { Link } from 'react-router-dom';
 import { Home, Login } from '@/utils/magicValues';
-
+import ListItem from './ListItem';
 export default function NavbarCustom() {
     const [open, setOpen] = useState(false);
 
@@ -68,7 +68,7 @@ export default function NavbarCustom() {
                             <NavigationMenuContent className=' bg-mywhite text-Background md:-translate-x-[18.18rem] lg:-translate-x-[24.50rem] z-50'>
                                 <ul className=" grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                     {List.map((item) => (
-                                        <ListItem key={item.href} href={item.href} title={item.title} className='bg-Lightblue/20 hover:brightness-110'>
+                                        <ListItem key={item.href} href={item.href} title={item.title} className='bg-Lightblue/20 hover:brightness-110 scroll-smooth '>
                                             {item.description}
                                         </ListItem>
                                     ))}
@@ -90,24 +90,4 @@ export default function NavbarCustom() {
             </div>
         </nav>
     );
-}
-
-function ListItem({
-    title,
-    children,
-    href,
-    ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
-    return (
-        <li {...props}>
-            <NavigationMenuLink asChild>
-                <Link to={href}>
-                    <div className="text-sm leading-none font-medium">{title}</div>
-                    <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-                        {children}
-                    </p>
-                </Link>
-            </NavigationMenuLink>
-        </li>
-    )
 }

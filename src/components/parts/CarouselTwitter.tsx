@@ -8,10 +8,11 @@ import {
 import { reviews } from "@/utils/Arrays";
 import TwitterCard from "@/components/UI/TwitterCard";
 import Tittle from "@/components/standalone/Tittle";
+import { OpinionesUrl } from "@/utils/magicValues";
 
 export default function CarouselTwitter() {
     return (
-        <section className="w-full flex flex-col items-center gap-10 ">
+        <section id={OpinionesUrl} className="w-full flex flex-col items-center gap-10 ">
             <Tittle
                 SubTittleText="Opiniones"
                 TittleText="Opiniones de nuestros usuarios. 🎖️"

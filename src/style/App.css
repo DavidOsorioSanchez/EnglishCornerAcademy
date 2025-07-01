@@ -7,6 +7,10 @@
   background-color: #333446;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer components {
   .DocSearch-Hit--Result {
     background-color: --alpha(var(--color-gray-950) / 10%);
