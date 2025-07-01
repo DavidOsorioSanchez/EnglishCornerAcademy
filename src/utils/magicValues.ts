@@ -4,7 +4,7 @@ export const precioPlanAfiliadosMensuales : number = 20 + precioClasePorHora;
 
 // rutas de la pagina
 export const Home : string = "/";
-export const PortadaUrl : string = "#Portada";
+export const PortadaUrl : string = "Portada";
 export const SolucionesUrl : string = "soluciones";
 export const OpinionesUrl : string = "opiniones";
 export const HowWorksUrl : string = "how-works";
