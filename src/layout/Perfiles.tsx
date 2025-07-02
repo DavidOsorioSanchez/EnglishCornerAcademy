@@ -8,6 +8,7 @@ export default function Perfiles({ children }: { children: React.ReactNode }) {
                 Logo={true}
                 Cuenta={false}
                 Paginas={false}
+                responsivSettings={false}
             />
             {children}
         </main>

@@ -9,6 +9,7 @@ export default function LandingPage({ children }: { children: React.ReactNode })
                 Logo={true}
                 Cuenta={true}
                 Paginas={true}
+                responsivSettings={true}
             />
             {children}
             <FooterCustom />

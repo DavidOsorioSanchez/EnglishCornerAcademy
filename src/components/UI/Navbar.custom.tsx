@@ -13,10 +13,11 @@ interface NavbarCustomProps {
     Logo: boolean;
     Cuenta: boolean;
     Paginas: boolean;
+    responsivSettings: boolean;
 }
 
 export default function NavbarCustom(
-    { retroceder, Logo, Cuenta, Paginas }: NavbarCustomProps
+    { retroceder, Logo, Cuenta, Paginas, responsivSettings }: NavbarCustomProps
 ) {
     const [open, setOpen] = useState(false);
 
@@ -24,9 +25,9 @@ export default function NavbarCustom(
         setOpen(!open);
     }
     return (
-        <nav className="bg-Items/20 flex justify-between items-center gap-2 px-8 py-2 shadow-md">
+        <nav className="bg-Items/20 flex justify-between items-center gap-2 px-8 py-2 shadow-md ">
             {retroceder && (
-                <Link to={Home} className="p-2 rounded-full bg-mywhite/20 hover:bg-mywhite/10 transition-all">
+                <Link to={Home} className="hidden p-2 rounded-full bg-mywhite/20 hover:bg-mywhite/10 transition-all md:block">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                     </svg>
@@ -34,7 +35,7 @@ export default function NavbarCustom(
                 </Link>
             )}
             {Logo && (
-                <Link to={Home} className="flex text-nowrap items-center space-x-2">
+                <Link to={Home} className="flex text-nowrap items-center space-x-2 ">
                     <img src="/IconPage.svg" alt="logo" className="w-12 h-12 aspect-square object-contain" />
                     <p className="hidden font-bold text-xl underline underline-offset-1 underline-mywhite/50 sm:block">English Corner Academy.</p>
                 </Link>
@@ -110,7 +111,14 @@ export default function NavbarCustom(
                         </svg>
                     </button>
                     {
-                        open && <ResponsiveToolBar FuncionCerrar={FuncionToolBar} />
+                        open && <ResponsiveToolBar 
+                            FuncionCerrar={FuncionToolBar} 
+                            Cuenta={Cuenta} 
+                            Paginas={Paginas}
+                            retroceder={retroceder}
+                            Logo={Logo}
+                            responsivSettings={responsivSettings}
+                        />
                     }
                 </div>
             </div>

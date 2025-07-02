@@ -10,6 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Logo={true}
                 Cuenta={true}
                 Paginas={false}
+                responsivSettings={true}
             />
             {children}
             <FooterCustom />
