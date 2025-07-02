@@ -10,6 +10,14 @@ export default function Trabajadores() {
         return <div>Trabajador no encontrado</div>;
     }
 
+    // Convierte worker.description en un elemento JSX usando dangerouslySetInnerHTML
+    const descriptionElement = (
+        <p
+            className="text-md mx-5"
+            dangerouslySetInnerHTML={{ __html: worker.description }}
+        />
+    );
+
     return (
         <section className=" flex flex-col items-center justify-start">
             <div className="relative w-screen h-56">
@@ -41,8 +49,7 @@ export default function Trabajadores() {
                             <img src={Linkedin} alt="Linkedin" className="w-12 h-12 p-1.5 object-contain aspect-square rounded-full bg-mywhite" />
                         </a>
                     </div>
-
-                    <p className="text-md mx-5">{worker.description}</p>
+                    {descriptionElement}
                     <ul className="flex flex-col text-lg gap-2 mx-10">
                         <li className="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">

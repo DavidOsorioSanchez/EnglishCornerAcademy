@@ -120,13 +120,14 @@ export const workers : Array<any> = [
         PaginaDescripcion: `/workers/1`,
         Horarios: "9:00 Am - 5:00 Pm",
         Dias:["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"],
+        
         description: `
-            <b>Alejandro Osorio</b> no es solo otro profesor de inglés. Con <b>más de 20 años de experiencia, ha transformado la vida de cientos de estudiantes</b>, ayudándoles a <b>hablar con confianza, aprobar exámenes clave (como TOEFL o IELTS) y avanzar en sus carreras</b>.  
+            <b>Alejandro Osorio</b> no es solo otro profesor de inglés. Con <b>más de 20 años de experiencia, ha transformado la vida de cientos de estudiantes</b>, ayudándoles a <b>hablar con confianza, aprobar exámenes clave (como TOEFL o IELTS) y avanzar en sus carreras</b>.  <br><br>
 
-            Como <b>fundador de English Corner Academy</b>, su método personalizado combina:  
-            ✔ <b>Clases adaptadas</b> a tus metas y ritmo de aprendizaje.  
-            ✔ <b>Técnicas probadas</b> para que hables desde la primera clase.  
-            ✔ <b>Enfoque práctico</b>, con énfasis en conversación y fluidez.  
+            Como <b>fundador de English Corner Academy</b>, su método personalizado combina:  <br>
+            ✔ <b>Clases adaptadas</b> a tus metas y ritmo de aprendizaje.  <br>
+            ✔ <b>Técnicas probadas</b> para que hables desde la primera clase.<br>  
+            ✔ <b>Enfoque práctico</b>, con énfasis en conversación y fluidez.  <br><br>
 
             ¿Listo para dejar atrás el inglés básico? <b>¡Agenda tu clase hoy y da el salto que tu futuro necesita!</b>
         `,
