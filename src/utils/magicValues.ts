@@ -1,6 +1,9 @@
 // Precios clases 
-export const precioClasePorHora : number = 60;
-export const precioPlanAfiliadosMensuales : number = 20 + precioClasePorHora;
+export const precioIndividualClasePorHora : number = 60;
+export const precioIndividualPlanAfiliadosMensuales : number = 20 + precioIndividualClasePorHora;
+
+export const precioGrupoClasePorHora : number = 200;
+export const precioGrupoPlanAfiliadosMensuales : number = 20 + precioGrupoClasePorHora;
 
 // rutas de la pagina
 export const Home : string = "/";
