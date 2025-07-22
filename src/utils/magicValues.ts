@@ -13,7 +13,7 @@ export const OpinionesUrl : string = "opiniones";
 export const HowWorksUrl : string = "how-works";
 export const WorkersUrl : string = "workers";
 export const PricesUrl : string = "prices";
-export const Login : string = "/auth/login";
-export const Singup : string = "/auth/singup";
+export const Login : string = "auth/login";
+export const Singup : string = "auth/singup";
 export const Trabajadores : string = "/workers/:id";
 

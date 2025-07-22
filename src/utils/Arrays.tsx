@@ -112,7 +112,7 @@ export const workers : Array<any> = [
     {
         id: 1,
         name: "Alejandro Osorio",
-        img: "https://scontent.feoh4-3.fna.fbcdn.net/v/t39.30808-6/469794242_10228033056433372_3774422237624396587_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHE1JM7WOTgLfbyOthu5_2Cj9cuVYnalZeP1y5VidqVl9AF2lRQlkvhxleP5SWyBDyDA2lmuJoalzNZZk5fNc07&_nc_ohc=ca29a6tUzVUQ7kNvwGmXCDr&_nc_oc=AdnZyzsgWgJ6qX-2dr4SL7uEqEwYyYN36ZQj2KTyaSBGarmBUGgwGOX1gXYT9JSu1Hk&_nc_zt=23&_nc_ht=scontent.feoh4-3.fna&_nc_gid=RXoT-xD_JdtTHeCkHBBzag&oh=00_AfMPa3qpVDkkeBt2pLj8aOTE5Jr4D9SJqJ6wWSM8VR35Cw&oe=68629AC0",
+        img: "https://i.imgur.com/WXjpTWi.jpeg",
         vanderImg: "https://avatar.vercel.sh/jill",
         position: ["Profesor de Inglés", "Fundador"],
         age: 60,

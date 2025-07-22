@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/UI/avatar"
 import EnDesarrollo from '@/components/UI/EnDesarrollo';
 import ResponsiveToolBar from '@/components/UI/ResponsiveToolbar';
 import { Link } from 'react-router-dom';
-import { Home, Login } from '@/utils/magicValues';
+import { Home, Login, Singup } from '@/utils/magicValues';
 import ListItem from './ListItem';
 
 interface NavbarCustomProps {
@@ -71,10 +71,10 @@ export default function NavbarCustom(
                                                 </a>
                                             </NavigationMenuLink>
                                         </li>
-                                        <ListItem href="/Login" title="Inicio de sesión" className='bg-Lightblue/20 transition-all hover:bg-Lightblue/5'>
+                                        <ListItem href={Login} title="Inicio de sesión" className='bg-Lightblue/20 transition-all hover:bg-Lightblue/5'>
                                             Inicia sesion para poder aceder a los contenidos de nuestra pagina.
                                         </ListItem>
-                                        <ListItem href="/registration" title="Registrarse" className='bg-Lightblue/20 transition-all hover:bg-Lightblue/5'>
+                                        <ListItem href={Singup} title="Registrarse" className='bg-Lightblue/20 transition-all hover:bg-Lightblue/5'>
                                             Regístrate para crear una cuenta y acceder a más funciones.
                                         </ListItem>
                                         <EnDesarrollo rounded>
@@ -92,7 +92,7 @@ export default function NavbarCustom(
                                 <NavigationMenuContent className=' bg-mywhite text-Background md:-translate-x-[18.18rem] lg:-translate-x-[24.50rem] z-50'>
                                     <ul className=" grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                         {List.map((item) => (
-                                            <ListItem key={item.href} href={item.href} title={item.title} className='bg-Lightblue/20 hover:brightness-110 scroll-smooth '>
+                                            <ListItem key={`#${item.href}`} href={`#${item.href}`} title={item.title} className='bg-Lightblue/20 hover:brightness-110 scroll-smooth '>
                                                 {item.description}
                                             </ListItem>
                                         ))}
