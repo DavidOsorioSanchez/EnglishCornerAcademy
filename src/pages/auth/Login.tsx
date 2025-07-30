@@ -27,18 +27,18 @@ export default function Login() {
                 <form onSubmit={handleSubmit} className="w-full flex flex-col gap-7">
                     <div className='w-full flex justify-center items-center'>
                         <div className="relative w-full max-w-2/3 min-w-32">
-                            <label className={`absolute ${email ? "-top-6 left-3 scale-90" : "top-[0.40rem] left-1/2 -translate-x-1/2"} pointer-events-none font-medium flex flex-nowrap transition-all duration-200`}>
+                            <label className={`absolute ${email ? "-top-7 left-3 scale-90" : "top-[0.40rem] left-1/2 -translate-x-1/2"} pointer-events-none font-medium flex flex-nowrap transition-all duration-200`}>
                                 <p className="text-xl text-mywhite/95">Email<span className="text-md text-[#FF8000]">*</span></p>
                             </label>
-                            <input type="email" onChange={handleEmail} className={`relative w-full outline-none rounded-t-sm h-fit p-2 border-b-2 ${email ? "border-blue-500/70 bg-mywhite/25" : "border-mywhite/70 bg-mywhite/5"} `} required />
+                            <input type="email" onChange={handleEmail} className={`relative w-full outline-none rounded-t-sm h-fit p-2 border-b-2 ${email ? "border-blue-500/70 bg-mywhite text-black" : "border-mywhite/70 bg-mywhite/15 text-mywhite"} `} required />
                         </div>
                     </div>
                     <div className='w-full flex justify-center items-center'>
                         <div className="relative w-full max-w-2/3 min-w-32">
-                            <label className={`absolute ${password ? "-top-6 left-3 scale-90" : "top-[0.40rem] left-1/2 -translate-x-1/2"} pointer-events-none font-medium flex flex-nowrap transition-all duration-200`}>
+                            <label className={`absolute ${password ? "-top-7 left-3 scale-90" : "top-[0.40rem] left-1/2 -translate-x-1/2"} pointer-events-none font-medium flex flex-nowrap transition-all duration-200`}>
                                 <p className="text-xl text-mywhite/95">password<span className="text-md text-[#FF8000]">*</span></p>
                             </label>
-                            <input type="password" onChange={handlePassword} className={`relative w-full outline-none rounded-t-sm h-fit p-2 border-b-2 ${password ? "border-blue-500/70 bg-mywhite/25" : "border-mywhite/70 bg-mywhite/5"} `} required />
+                            <input type="password" onChange={handlePassword} className={`relative w-full outline-none rounded-t-sm h-fit p-2 border-b-2 ${password ? "border-blue-500/70 bg-mywhite text-black" : "border-mywhite/70 bg-mywhite/15 text-mywhite"} `} required />
                         </div>
                     </div>
                     <button type="submit" className="w-32 rounded-md p-2 text-center bg-blue-500 text-white">Iniciar Sesión</button>
