@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Home, Login, Singup, Trabajadores } from "@/utils/magicValues";
 
 import Perfiles from "@/layout/Perfiles";
@@ -14,15 +14,13 @@ import NotFound from "@/pages/error/404NotFound";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={Home} element={<LandingPage><HomePage /></LandingPage>} />
-        <Route path={Login} element={<Auth><LoginPage /></Auth>} />
-        <Route path={Singup} element={<Auth><SingupPage /></Auth>} />
-        <Route path={Trabajadores} element={<Perfiles><TrabajadoresPage /></Perfiles>} />
-        <Route element={<NotFound />} path="*"/>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path={Home} element={<LandingPage><HomePage /></LandingPage>} />
+      <Route path={Login} element={<Auth><LoginPage /></Auth>} />
+      <Route path={Singup} element={<Auth><SingupPage /></Auth>} />
+      <Route path={Trabajadores} element={<Perfiles><TrabajadoresPage /></Perfiles>} />
+      <Route element={<NotFound />} path="*"/>
+    </Routes>
   )
 }
 
