@@ -16,4 +16,5 @@ export const PricesUrl : string = "prices";
 export const Login : string = "auth/login";
 export const Singup : string = "auth/singup";
 export const Trabajadores : string = "/workers/:id";
+export const Calendario : string = "private/calendario";
 

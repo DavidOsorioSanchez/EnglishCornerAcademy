@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from '@/components/UI/navigation-menu';
 import { List } from '@/utils/Arrays';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/UI/avatar"
@@ -20,6 +20,15 @@ export default function NavbarCustom(
     { retroceder, Logo, Cuenta, Paginas, responsivSettings }: NavbarCustomProps
 ) {
     const [open, setOpen] = useState(false);
+    const [userName, setUserName] = useState<string>('');
+    const [userPicture, setUserPicture] = useState<string>('');
+
+    useEffect(() => {
+        const user = localStorage.getItem('userData');
+        const userData = user ? JSON.parse(user) : null;
+        setUserName(userData ? userData.name : 'User');
+        setUserPicture(userData ? userData.picture : 'https://avatars.githubusercontent.com/u/124599?v=4');
+    }, []);
 
     function FuncionToolBar() {
         setOpen(!open);
@@ -55,12 +64,12 @@ export default function NavbarCustom(
                                                     href={Login}
                                                 >
                                                     <Avatar>
-                                                        <AvatarImage src="https://avatars.githubusercontent.com/u/124599?v=4" />
+                                                        <AvatarImage src={userPicture} />
                                                         <AvatarFallback>CN</AvatarFallback>
                                                     </Avatar>
                                                     <div className="text-center flex flex-col gap-2.5">
                                                         <div className="flex flex-col items-center justify-center gap-0">
-                                                            <p className="text-lg font-semibold text-nowrap">David Osorio</p>
+                                                            <p className="text-lg font-semibold text-nowrap">{userName}</p>
                                                             <p className="text-muted-foreground text-sm leading-tight border-t-[1px]">
                                                                 Estudiante
                                                             </p>
