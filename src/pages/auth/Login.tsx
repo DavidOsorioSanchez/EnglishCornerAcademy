@@ -5,13 +5,41 @@ import { Slide, ToastContainer, toast } from 'react-toastify';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
-import { Singup } from "@/utils/magicValues";
+import { Calendario, Singup } from "@/utils/magicValues";
+// import axios from "axios";
+
+
+interface GoogleDataUser {
+    name: string;
+    given_name: string;
+    family_name: string;
+    email: string;
+    email_verified: boolean;
+    picture: string;
+};
+
+interface GoogleSecurityPublic{
+    aud: string;
+    jti: string;
+}
+
+// interface GoogleSecurityParams {
+//     aud: string;
+//     azp: string;
+//     exp: number;
+//     iat: number;
+//     iss: string;
+//     sub: string;
+//     nbf: number;
+//     jti: string;
+// }
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
+    // const Server_Url: string = import.meta.env.VITE_SERVER_URL as string;
 
     function handleEmail(e: any) {
         setEmail(e.target.value)
@@ -42,11 +70,46 @@ export default function Login() {
     }
 
     async function handleGoogleLogin(response: any) {
-        console.log(response);
-        const deCodeData = jwtDecode(response.credential);
-        console.log(deCodeData);
-        localStorage.setItem('userData', JSON.stringify(deCodeData));
-        navigate('/private/calendario');
+        const deCodeData: GoogleDataUser = jwtDecode(response.credential);
+        const SecurityPublic: GoogleSecurityPublic = jwtDecode(response.credential);
+
+        localStorage.setItem('userData', JSON.stringify({
+            name: deCodeData.name,
+            given_name: deCodeData.given_name,
+            family_name: deCodeData.family_name,
+            email: deCodeData.email,
+            email_verified: deCodeData.email_verified,
+            picture: deCodeData.picture
+        }));
+        
+        localStorage.setItem('securityPublic', JSON.stringify({
+            aud: SecurityPublic.aud,
+            jti: SecurityPublic.jti
+        }));
+
+        // axios.post(`${Server_Url}/auth/GoogleAuth`, {
+        //     name: deCodeData.name,
+        //     email: deCodeData.email,
+        //     picture: deCodeData.picture,
+        //     aud: Security.aud,
+        //     azp: Security.azp,
+        //     exp: Security.exp,
+        //     iat: Security.iat,
+        //     iss: Security.iss,
+        //     sub: Security.sub,
+        //     nbf: Security.nbf,
+        //     jti: Security.jti
+        // })
+        // .then(function (response: any) {
+        //         console.log(response);
+        // })
+        // .catch(function (error: any) {
+        //         console.log("todavia no tengo el servidor: " + error);
+        // });
+
+
+
+        navigate(`/${Calendario}`);
     }
 
     async function handleGoogleLoginFailure() {
@@ -114,9 +177,9 @@ export default function Login() {
                     <div className="w-5/6 flex justify-center items-center gap-2 p-2 pt-3.5 border-t-[2px] border-mywhite/30 ">
                         <button type="submit" className="w-32 rounded-full p-2 text-center bg-blue-600/90 text-white transition-all hover:brightness-110">Iniciar Sesión</button>
                         <p className="text-2xl text-mywhite/40">|</p>
-                        <GoogleLogin onSuccess={(CredentialResp)=>{
+                        <GoogleLogin onSuccess={(CredentialResp) => {
                             handleGoogleLogin(CredentialResp);
-                        }} onError={handleGoogleLoginFailure}/>
+                        }} onError={handleGoogleLoginFailure} />
                     </div>
                 </form>
                 <p className="text-center text-mywhite/40 text-sm my-1">¿No tienes cuenta? <Link to={`../../${Singup}`} className="text-blue-500"> Regístrate </Link></p>

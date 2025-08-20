@@ -5,7 +5,23 @@ import { Slide, ToastContainer, toast } from 'react-toastify';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
-import { Login } from "@/utils/magicValues";
+import { Login, NewAccount, Home } from "@/utils/magicValues";
+
+
+interface GoogleDataUser {
+    name: string;
+    given_name: string;
+    family_name: string;
+    email: string;
+    email_verified: boolean;
+    picture: string;
+    [key: string]: any;
+};
+
+interface GoogleSecurityPublic{
+    aud: string;
+    jti: string;
+}
 
 export default function Singup() {
     const [email, setEmail] = useState("");
@@ -64,11 +80,28 @@ export default function Singup() {
     }
 
     async function handleGoogleLogin(response: any) {
-        console.log(response);
-        const deCodeData = jwtDecode(response.credential);
-        console.log(deCodeData);
-        localStorage.setItem('userData', JSON.stringify(deCodeData));
-        navigate('/private/calendario');
+        const deCodeData: GoogleDataUser = jwtDecode(response.credential);
+        const SecurityPublic: GoogleSecurityPublic = jwtDecode(response.credential);
+        
+        if(localStorage.getItem('userData')) {
+            navigate(`/${Home}`);
+        }
+
+        localStorage.setItem('userData', JSON.stringify({
+            name: deCodeData.name,
+            given_name: deCodeData.given_name,
+            family_name: deCodeData.family_name,
+            email: deCodeData.email,
+            email_verified: deCodeData.email_verified,
+            picture: deCodeData.picture
+        }));
+        
+        localStorage.setItem('securityPublic', JSON.stringify({
+            aud: SecurityPublic.aud,
+            jti: SecurityPublic.jti
+        }));
+        
+        navigate(`/${NewAccount}`);
     }
 
     async function handleGoogleLoginFailure() {

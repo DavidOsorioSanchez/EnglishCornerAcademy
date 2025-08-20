@@ -17,4 +17,5 @@ export const Login : string = "auth/login";
 export const Singup : string = "auth/singup";
 export const Trabajadores : string = "/workers/:id";
 export const Calendario : string = "private/calendario";
+export const NewAccount : string = "auth/new-account";
 
